@@ -17,8 +17,8 @@ async def gbun(event):
     gbunVar = event.text
     gbunVar = gbunVar[6:]
     me = await event.client.get_me()
-    mentions = f"`🚨 Warning!!`\n **USER** 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By {me.first_name}\n"
-    await edit_or_reply(event, "`Summoning out the mighty gban hammer ☠️`")
+    mentions = f"`🚨 W A R N I N G !!!`\n **USER** 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By {me.first_name}\n"
+    await edit_or_reply(event, "S u m m o n i n g out the mighty gban hammer ☠️")
     asyncio.sleep(3.5)
     chat = await event.get_input_chat()
     async for _ in event.client.iter_participants(
@@ -57,7 +57,7 @@ async def gbun(event):
             await reply_message.reply(jnl)
     else:
         mention = (
-            f"`🚨 Warning!!`\n **USER** 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By {me.first_name} \n**Reason:** `Suka Ghosting!!!` "
+            f"`🚨 W A R N I N G !!!`\n **USER** 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By {me.first_name} \n**Reason:** `Suka Ghosting!!!` "
         )
         await event.reply(mention)
     await event.delete()
