@@ -30,7 +30,7 @@ from userbot import (
 from userbot.modules.gcast import GCAST_BLACKLIST as GBL
 
 EOL = "EOL\nBlvckcards v{}, Copyright © 2021-2022 Matrix • <https://github.com/matrixbotz>"
-MSG_BLACKLIST = "Sorry Your Account Has Been Turn Off , USERBOT {} Non Activaed.\nZeploy-UserBot v{}, Copyright © 2021-2022 Matrix • <https://github.com/Matrixbotz>"
+MSG_BLACKLIST = "Sorry Your Account Has Been Turn Off , USERBOT {} Non Activaed.\nBlvcck-UserBot v{}, Copyright © 2021-2022 Matrix • <https://github.com/Matrixbotz>"
 
 
 async def man_client(client):
@@ -39,13 +39,13 @@ async def man_client(client):
 
 
 def multiman():
-    if 844432220 not in DEVS:
+    if 5251274635 not in DEVS:
         LOGS.warning(EOL.format(version))
         sys.exit(1)
     if -1001473548283 not in GBL:
         LOGS.warning(EOL.format(version))
         sys.exit(1)
-    if 844432220 not in DEFAULT:
+    if 5251274635 not in DEFAULT:
         LOGS.warning(EOL.format(version))
         sys.exit(1)
     failed = 0
