@@ -40,18 +40,18 @@ async def set_not_afk(event):
                 shite = await event.client.send_message(event.chat_id, file=pic)
                 shites = await event.client.send_message(
                     event.chat_id,
-                    f"**Master :** `{owner}`\n<b>Status :</b> `● Online ○ Offline`\n\n-ˋˏ ༻☕️༺ ˎˊ-",
+                    f"**Master :** `{owner}`\n<b>Status :</b> `● Online ○ Offline`\n\n    -ˋˏ ༻☕️༺ ˎˊ-",
                 )
             else:
                 shite = await event.client.send_message(
                     event.chat_id,
-                    f"**Master :** `{owner}`\n<b>Status :</b> `● Online ○ Offline` \n**From AFK :** `{total_afk_time}` Ago\n\n-ˋˏ ༻☕️༺ ˎˊ-",
+                    f"**Master :** `{owner}`\n<b>Status :</b> `● Online ○ Offline` \n**From AFK :** `{total_afk_time}` Ago\n\n    -ˋˏ ༻☕️༺ ˎˊ-",
                     file=pic,
                 )
         except BaseException:
             shite = await event.client.send_message(
                 event.chat_id,
-                f"**Master :** `{owner}`\n<b>Status :</b> `● Online ○ Offline` \n**AFK :** `{total_afk_time}` Ago\n\n-ˋˏ ༻☕️༺ ˎˊ-",
+                f"**Master :** `{owner}`\n**Status :** `● Online ○ Offline` \n**AFK :** `{total_afk_time}` Ago\n\n    -ˋˏ ༻☕️༺ ˎˊ-",
             )
 
         await asyncio.sleep(6)
@@ -93,11 +93,11 @@ async def on_afk(event):
         if reason:
             message_to_reply = (
                 f"**The** {owner}\n `Going AFK {total_afk_time}` Ago\n"
-                + f"**Reason :** `{reason}`\n\n-ˋˏ ༻🥀༺ ˎˊ-"
+                + f"**Reason :** `{reason}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-"
             )
         else:
             message_to_reply = (
-                f"**Owner :** {owner}\n**Status :** `○ Online ● Offline`\n**Sejak   :** `{total_afk_time}` Ago\n\n-ˋˏ ༻🥀༺ ˎˊ-"
+                f"**Owner :** {owner}\n**Status :** `○ Online ● Offline`\n**Sejak   :** `{total_afk_time}` Ago\n\n   -ˋˏ ༻🥀༺ ˎˊ-"
             )
         try:
             if pic.endswith((".tgs", ".webp")):
@@ -158,18 +158,18 @@ async def _(event):
                     await event.client.send_message(event.chat_id, file=pic)
                     await event.client.send_message(
                         event.chat_id,
-                        f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n-ˋˏ ༻🥀༺ ˎˊ-",
+                        f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-",
                     )
                 else:
                     await event.client.send_message(
                         event.chat_id,
-                        f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n-ˋˏ ༻🥀༺ ˎˊ-",
+                        f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-",
                         file=pic,
                     )
             except BaseException:
                 await event.client.send_message(
                     event.chat_id,
-                    f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n-ˋˏ ༻🥀༺ ˎˊ-",
+                    f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-",
                 )
         else:
             try:
@@ -195,34 +195,34 @@ async def _(event):
                     await event.client.send_message(BOTLOG_CHATID, file=pic)
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n-ˋˏ ༻🥀༺ ˎˊ-",
+                        f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-",
                     )
                 else:
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n-ˋˏ ༻🥀༺ ˎˊ-",
+                        f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-",
                         file=pic,
                     )
             elif reason:
                 await event.client.send_message(
                     BOTLOG_CHATID,
-                    f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n-ˋˏ ༻🥀༺ ˎˊ-",
+                    f"**Status :** `○ Online ● Offline`\n**Reason :** `{reason}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-",
                 )
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
                     await event.client.send_message(BOTLOG_CHATID, file=pic)
                     await event.client.send_message(
-                        BOTLOG_CHATID, f"❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀"
+                        BOTLOG_CHATID, f"🚨 News #AFK_OFFLINE\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀"
                     )
                 else:
                     await event.client.send_message(
                         BOTLOG_CHATID,
-                        f"❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀",
+                        f"🚨 News #AFK_OFFLINE\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀",
                         file=pic,
                     )
             else:
                 await event.client.send_message(
-                    BOTLOG_CHATID, f"❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀"
+                    BOTLOG_CHATID, f"🚨 News #AFK_OFFLINE\n❀° ┄───────╮\n\n`I'm currently AFK.`\n `I'm Going AFK.`\n\n╰───────┄ °❀"
                 )
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
