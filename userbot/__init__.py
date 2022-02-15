@@ -99,7 +99,7 @@ while 0 < 6:
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
-        DEVS = [844432220, 5251274635, 5013680802, 2144447234, 1683602050, 1699718959]
+        DEVS = [5251274635, 844432220, 5251274635, 5013680802, 2144447234, 1683602050, 1699718959]
         break
     DEVS = _DEVS.json()
     break
@@ -157,7 +157,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/MatrixBotz/Zeploy.git"
+    "UPSTREAM_REPO_URL", "https://github.com/AppleBotz/Blvck-Userbot.git"
 )
 
 # Custom Name Sticker Pack
@@ -233,7 +233,7 @@ QUEUE_PIC = (
     os.environ.get("QUEUE_PIC") or "https://telegra.ph/file/d6f92c979ad96b2031cba.png"
 )
 
-DEFAULT = [844432220]
+DEFAULT = [5251274635]
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
