@@ -78,7 +78,7 @@ def multiman():
             if BOTLOG_CHATID != 0:
                 await bot.send_message(
                     BOTLOG_CHATID,
-                    f"🔥 **Blvck-Userbot Berhasil Di Aktifkan**\n✦•··············•✦•··············•✦\n➠ **Userbot Version -** `{version}@{branch}`\n➠ **Ketik** `{cmd}alive` **untuk Mengecheck Bot**\n✦•··············•✦•··············•✦",
+                    f"🔥 **Blvck-Userbot Berhasil Di Aktifkan**\n✦•━━━━•✦•━━━━•✦\n➠ **Userbot Version -** `{version}@{branch}`\n➠ **Ketik** `{cmd}alive` **untuk Mengecheck Bot**\n✦•━━━━•✦•━━━━•✦",
                 )
         except Exception as e:
             LOGS.info(f"{e}")
