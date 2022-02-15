@@ -29,8 +29,8 @@ from userbot import (
 )
 from userbot.modules.gcast import GCAST_BLACKLIST as GBL
 
-EOL = "EOL\nBlvckcards v{}, Copyright © 2021-2022 ʀɪsᴍᴀɴ• <https://github.com/mrismanaziz>>"
-MSG_BLACKLIST = "Sorry Your Account Has Been Turn Off , USERBOT {} Non Activaed.\nBlvck-UserBot v{}, Copyright © 2021-2022 ʀɪsᴍᴀɴ• <https://github.com/mrismanaziz>>"
+EOL = "EOL\nBlvckcards v{}, Copyright © 2021-2022 Matrix • <https://github.com/AppleBotz>>"
+MSG_BLACKLIST = "Sorry Your Account Has Been Turn Off , USERBOT {} Non Activaed.\nBlvck-UserBot v{}, Copyright © 2021-2022 Matrix • <https://github.com/AppleBotz>>"
 
 
 async def man_client(client):
