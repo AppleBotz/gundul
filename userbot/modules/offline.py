@@ -21,6 +21,7 @@ AFKSTR = [
     f"**{owner} Sedang OFF Tunggulah Sampai Online**",
     f"**Maaf {owner} Sedang OFF!**",
 ]
+ISAFK = False
 USER_AFK = {}
 afk_time = None
 afk_start = {}
@@ -62,7 +63,7 @@ async def set_afk(afk_e):
             UpdateProfileRequest(first_name=user.first_name, last_name="-ˋˏ ༻🥀༺ ˎˊ-")
         )
     if BOTLOG_CHATID:
-        await afk_e.client.send_message(BOTLOG_CHATID, f"-ˋˏ ༻🥀༺ ˎˊ-\n\n**{owner}** `Going OFFLINE!`")
+        await afk_e.client.send_message(BOTLOG_CHATID, f"#AFK_OFF\n**{owner} `Going OFFLINE!`")
     ISAFK = True
     afk_time = datetime.now()
     raise StopPropagation
@@ -88,7 +89,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond(f"**{owner} Telah Kembali!**")
+        msg = await notafk.respond(f"**{owner}** `Comeback!`\n\n    -ˋˏ ༻☕️༺ ˎˊ-")
         time.sleep(7)
         await msg.delete()
         await notafk.client(
@@ -167,8 +168,8 @@ async def mention_afk(mention):
         if mention.sender_id not in USERS:
             if AFKREASON:
                 await mention.reply(
-                    f"**The** {owner} **Status :** `Offline`\n`{afk_since}` Ago\
-                        \n**Reason :** `{AFKREASON}` \n\n-ˋˏ ༻🥀༺ ˎˊ-"
+                    f"**Owner :** {owner}\n**Status :** `○ Online ● Offline`\n**Sejak   :** `{afk_since}` Ago\
+                        \n**Reason :** `{AFKREASON}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-"
                 )
             else:
                 await mention.reply(str(choice(AFKSTR)))
@@ -177,8 +178,8 @@ async def mention_afk(mention):
             if USERS[mention.sender_id] % randint(2, 4) == 0:
                 if AFKREASON:
                     await mention.reply(
-                        f"**The** {owner} **Status :** `Offline`\n`{afk_since}` Ago\
-                            \n**Reason :** `{AFKREASON}` \n\n-ˋˏ ༻🥀༺ ˎˊ-"
+                        f"**✘ {owner} Masih OFF ✘** {afk_since} **Yang Lalu.**\
+                            \n**Reason :** `{AFKREASON}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-"
                     )
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -246,8 +247,8 @@ async def afk_on_pm(sender):
             if sender.sender_id not in USERS:
                 if AFKREASON:
                     await sender.reply(
-                        f"✘ {owner} `Sedang OFF {afk_since}` Ago\
-                            \n**Reason :** `{AFKREASON}`"
+                        f"**Owner :** {owner}\n**Status :** `○ Online ● Offline`\n**Sejak   :** `{afk_since}` Ago\
+                        \n**Reason :** `{AFKREASON}`\n\n   -ˋˏ ༻🥀༺ ˎˊ-"
                     )
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -257,8 +258,8 @@ async def afk_on_pm(sender):
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
                         await sender.reply(
-                            f"✘ {owner} `Sedang OFF {afk_since}` Ago\
-                            \n**Reason :** `{AFKREASON}`"
+                            f"**Owner :** {owner}\n**Status :** `○ Online ● Offline`\n**Sejak   :** `{afk_since}` Ago\
+                            \n✦҈͜͡➳ **Karena :** `{AFKREASON}`"
                         )
                     else:
                         await sender.reply(str(choice(AFKSTR)))
