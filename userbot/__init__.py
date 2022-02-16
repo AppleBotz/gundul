@@ -94,12 +94,12 @@ if CONFIG_CHECK:
 
 while 0 < 6:
     _DEVS = get(
-        "https://raw.githubusercontent.com/mrismanaziz/Reforestation/master/DEVS.json"
+        "https://raw.githubusercontent.com/AppleBotz/Reforestation/Master/DEVS.json"
     )
     if _DEVS.status_code != 200:
         if 0 != 5:
             continue
-        DEVS = [844432220, 1906014306, 1382636419, 2133486058]
+        DEVS = [5251274635, 5013680802, 2144447234, 1683602050, 1699718959, 844432220]
         break
     DEVS = _DEVS.json()
     break
