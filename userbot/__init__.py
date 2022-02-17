@@ -286,7 +286,7 @@ del _BLACKLIST
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "BlvckcardsBot"
+    session = "ManUserBot"
 try:
     bot = TelegramClient(
         session=session,
