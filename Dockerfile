@@ -1,4 +1,4 @@
-FROM applebotz/blvck-userbot:buster
+FROM mrismanaziz/man-userbot:buster
 
 RUN git clone -b main https://github.com/AppleBotz/Blvck-Userbot /home/blvck-userbot/ \
 
