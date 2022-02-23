@@ -55,6 +55,7 @@ async def get_readable_time(seconds: int) -> str:
 
 
 @man_cmd(pattern="ping$")
+@register(pattern=r"^\.cgband(?: |$)(.*)", sudo=True)
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
